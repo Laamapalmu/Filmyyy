@@ -37,7 +37,8 @@ namespace Filmyyy
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + (int)numericUpDown3.Value * 60;
+            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + ((int)numericUpDown3.Value * 60) + ((int)numericUpDown4.Value * 60) + ((int)numericUpDown5.Value * 60);
+            UpdateLabel();
             timer.Start();
         }
         private void buttonStop_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace Filmyyy
         private void buttonReset_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + (int)numericUpDown3.Value * 60;
+            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + ((int)numericUpDown3.Value * 60) + ((int)numericUpDown4.Value * 60) + ((int)numericUpDown5.Value * 60);
             UpdateLabel();
         }
         private void UpdateLabel()
