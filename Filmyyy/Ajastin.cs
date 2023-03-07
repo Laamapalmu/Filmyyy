@@ -14,6 +14,7 @@ namespace Filmyyy
 {
     public partial class Ajastin : Form
     {
+        private int remainingTime;
         public Ajastin()
         {
             InitializeComponent();
@@ -21,8 +22,7 @@ namespace Filmyyy
 
         int timeleft = 60;
 
-        //Ajastimen logiikka
-        private void timer_Tick_1(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
             if (timeleft > 0)
             {
@@ -35,30 +35,21 @@ namespace Filmyyy
                 timerlabel.Text = "Time is up!";
             }
         }
-
-        private void buttonStart_Click_1(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)
         {
+            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + (int)numericUpDown3.Value * 60;
             timer.Start();
         }
-
-        private void buttonStop_Click_1(object sender, EventArgs e)
+        private void buttonStop_Click(object sender, EventArgs e)
         {
             timer.Stop();
         }
-
         private void buttonReset_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            timeleft = 0;
+            timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + (int)numericUpDown3.Value * 60;
             UpdateLabel();
         }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            timeleft = (int)numericUpDown1.Value * 60;
-        }
-
-        //Ajan formatointi
         private void UpdateLabel()
         {
             TimeSpan timeRemaining = TimeSpan.FromSeconds(timeleft);
