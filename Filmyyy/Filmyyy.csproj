@@ -52,6 +52,12 @@
     <Compile Include="Ajastin.Designer.cs">
       <DependentUpon>Ajastin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DistancePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistancePage.Designer.cs">
+      <DependentUpon>DistancePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ajastin.resx">
       <DependentUpon>Ajastin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistancePage.resx">
+      <DependentUpon>DistancePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

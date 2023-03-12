@@ -22,5 +22,11 @@ namespace Filmyyy
             var newform = new Ajastin();
             newform.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var newform = new DistancePage();
+            newform.Show();
+        }
     }
 }
