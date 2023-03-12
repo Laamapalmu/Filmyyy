@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +37,6 @@ namespace Filmyyy
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            //numericUpDown lisätään 60s aikaa timerlabeliin
             timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + ((int)numericUpDown3.Value * 60) + ((int)numericUpDown4.Value * 60) + ((int)numericUpDown5.Value * 60);
             UpdateLabel();
             timer.Start();
@@ -48,7 +47,7 @@ namespace Filmyyy
         }
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            //Pysäyttää ajastimen ja resetoi sen aikaisempaan lukemaan
+            //Pysayttaa ajastimen ja resetoi sen aikaisempaan lukemaan
             timer.Stop();
             timeleft = ((int)numericUpDown1.Value * 60) + ((int)numericUpDown2.Value * 60) + ((int)numericUpDown3.Value * 60) + ((int)numericUpDown4.Value * 60) + ((int)numericUpDown5.Value * 60);
             UpdateLabel();
